@@ -1,4 +1,4 @@
-# A
+# Weather App
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.8.
 
@@ -29,5 +29,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Packages:
 
 `npm install @fortawesome/fontawesome-svg-core`
+
 `npm install @fortawesome/free-solid-svg-icons`
+
 `npm install @fortawesome/angular-fontawesome@0.14.x`
