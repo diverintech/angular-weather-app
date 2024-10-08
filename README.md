@@ -1,6 +1,10 @@
 # Weather App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.8.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.8, but the option to disable standalone components was applied using the following command: `ng new --no-standalone`.
+
+The project is based on the course Curso de Angular 15: Do Iniciante ao Especialista by Marcos Naves on Udemy.
+
+The objective of this project is to create an app that consumes the API provided by OpenWeatherMap.
 
 ## Development server
 
