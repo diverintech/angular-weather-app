@@ -10,8 +10,8 @@ describe('WeatherHomeComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [WeatherHomeComponent]
     })
-    .compileComponents();
-    
+      .compileComponents();
+
     fixture = TestBed.createComponent(WeatherHomeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

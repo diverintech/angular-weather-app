@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { WeatherService } from '../../services/weather.service';
-import {WeatherData} from "../../../../models/interfaces/WeatherData.interface";
+import { WeatherData } from "../../../../models/interfaces/WeatherData.interface";
 
 @Component({
   selector: 'app-weather-home',
@@ -15,7 +15,7 @@ export class WeatherHomeComponent implements OnInit, OnDestroy {
   weatherData!: WeatherData;
   searchIcon = faMagnifyingGlass;
 
-  constructor(private weatherService: WeatherService) {}
+  constructor(private weatherService: WeatherService) { }
 
   ngOnInit(): void {
     this.getWheatherData(this.initialCityName);
@@ -36,7 +36,6 @@ export class WeatherHomeComponent implements OnInit, OnDestroy {
 
   onSubmit(): void {
     this.getWheatherData(this.initialCityName);
-    console.log('CHAMOU A FUNÇÃO');
     this.initialCityName = '';
   }
 

@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 The project is based on the course Curso de Angular 15: Do Iniciante ao Especialista by Marcos Naves on Udemy.
 
-The objective of this project is to create an app that consumes the API provided by OpenWeatherMap.
+The objective of this project is to create an app that consumes the API provided by [OpenWeatherMap](https://openweathermap.org/).
 
 ## Development server
 

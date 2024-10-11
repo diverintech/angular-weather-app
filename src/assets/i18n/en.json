@@ -1,0 +1,15 @@
+{
+  "WEATHER": {
+    "CITY": "City",
+    "TEMPERATURE": "Temperature",
+    "HUMIDITY": "Humidity",
+    "WIND": "Wind",
+    "MORE_INFO": "More information",
+    "MINIMUM": "Minimum",
+    "MAXIMUM": "Maximum",
+    "WIND_SPEED": "Wind speed",
+    "KMH": "km/h",
+    "SEARCH_LOCATION": "Search location",
+    "WEATHER_APP": "Weather Application"
+  }
+}

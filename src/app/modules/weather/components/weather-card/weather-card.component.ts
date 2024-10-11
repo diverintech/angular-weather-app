@@ -11,9 +11,11 @@ export class WeatherCardComponent {
 
   @Input() weatherDataInput!: WeatherData;
 
-  minTemperatureIcon = faTemperatureLow
-  maxTemperatureIcon = faTemperatureHigh
-  humidityIcon = faDroplet
-  windIcon = faWind
+  icons = {
+    minTemp: faTemperatureLow,
+    maxTemp: faTemperatureHigh,
+    humidity: faDroplet,
+    wind: faWind
+  };
 
 }
