@@ -1,12 +1,14 @@
-<div class="container" *ngIf="weatherDataInput">
+<div class="container" role="region" aria-labelledby="weather-info" *ngIf="weatherDataInput; else errorTemplate">
     <div class="upper-data">
-        <img src="assets/sun.jpg" *ngIf="weatherDataInput.main.temp > 15" alt="Sunny weather" />
-        <img src="assets/cold1.jpg" *ngIf="weatherDataInput.main.temp <= 15" alt="Cold weather" />
+        <img src="assets/sun.jpg" *ngIf="weatherDataInput.main.temp > 15"
+            alt="{{ 'WEATHER.SUNNY_WEATHER' | translate }}" />
+        <img src="assets/cold1.jpg" *ngIf="weatherDataInput.main.temp <= 15"
+            alt="{{ 'WEATHER.COLD_WEATHER' | translate }}" />
 
         <div class="weather-data">
             <div class="location">{{ weatherDataInput.name }}</div>
             <div class="temperature">
-                {{ weatherDataInput.main.temp | number : "1.0-0" }}ºC
+                {{ weatherDataInput.main.temp | number : "1.0-0" }}º{{ currentUnit }}
             </div>
         </div>
     </div>
@@ -22,7 +24,7 @@
                 </div>
 
                 <div class="info-block-value">
-                    {{ weatherDataInput.main.temp_min | number : "1.0-0" }} ºC
+                    {{ weatherDataInput.main.temp_min | number : "1.0-0" }} º{{ currentUnit }}
                 </div>
             </div>
 
@@ -33,7 +35,7 @@
                 </div>
 
                 <div class="info-block-value">
-                    {{ weatherDataInput.main.temp_max | number : "1.0-0" }} ºC
+                    {{ weatherDataInput.main.temp_max | number : "1.0-0" }} º{{ currentUnit }}
                 </div>
             </div>
 
@@ -61,3 +63,13 @@
         </div>
     </div>
 </div>
+
+
+<!--Add rain information -->
+<div class="info-block-value">
+  {{ weatherDataInput.rain["1h"] }}%
+</div>
+
+<ng-template #errorTemplate>
+    <div class="error-message">{{ 'WEATHER.ERROR_LOADING' | translate }}</div>
+</ng-template>

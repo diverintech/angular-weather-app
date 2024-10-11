@@ -1,8 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import { WeatherService } from '../../services/weather.service';
+import { WeatherService } from '../../services/weatherData/weather.service';
 import { WeatherData } from "../../../../models/interfaces/WeatherData.interface";
+import { TemperatureConverterService } from '../../services/temperatureConverter/temperature-converter.service';
 
 @Component({
   selector: 'app-weather-home',
@@ -14,28 +15,47 @@ export class WeatherHomeComponent implements OnInit, OnDestroy {
   initialCityName = 'Lisboa';
   weatherData!: WeatherData;
   searchIcon = faMagnifyingGlass;
+  loading: boolean = false;
+  currentUnit: string = 'C'; // Unidade atual
 
-  constructor(private weatherService: WeatherService) { }
+  constructor(private weatherService: WeatherService, private tempConverter: TemperatureConverterService) { }
 
   ngOnInit(): void {
-    this.getWheatherData(this.initialCityName);
+    this.getWeatherData(this.initialCityName);
   }
 
-  getWheatherData(cityName: string): void {
+  getWeatherData(cityName: string): void {
+    this.loading = true;
     this.weatherService
       .getWeatherData(cityName)
       .pipe(takeUntil(this.destroy$))
       .subscribe({
         next: (response) => {
-          response && (this.weatherData = response);
-          console.log(this.weatherData);
+          this.weatherData = response;
+          this.loading = false;
         },
-        error: (error) => console.log(error),
+        error: (error) => {
+          console.log(error);
+          this.loading = false;
+        },
       });
   }
 
+  switchUnit(unit: string) {
+    this.currentUnit = unit;
+    if (unit === 'F') {
+      this.weatherData.main.temp = this.tempConverter.convertToFahrenheit(this.weatherData.main.temp);
+      this.weatherData.main.temp_min = this.tempConverter.convertToFahrenheit(this.weatherData.main.temp_min);
+      this.weatherData.main.temp_max = this.tempConverter.convertToFahrenheit(this.weatherData.main.temp_max);
+    } else {
+      this.weatherData.main.temp = this.tempConverter.convertToCelsius(this.weatherData.main.temp);
+      this.weatherData.main.temp_min = this.tempConverter.convertToCelsius(this.weatherData.main.temp_min);
+      this.weatherData.main.temp_max = this.tempConverter.convertToCelsius(this.weatherData.main.temp_max);
+    }
+  }
+
   onSubmit(): void {
-    this.getWheatherData(this.initialCityName);
+    this.getWeatherData(this.initialCityName);
     this.initialCityName = '';
   }
 

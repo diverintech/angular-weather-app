@@ -10,6 +10,9 @@
     "WIND_SPEED": "Velocidade do vento",
     "KMH": "km/h",
     "SEARCH_LOCATION": "Porcurar localização",
-    "WEATHER_APP": "Aplicação de Clima"
+    "WEATHER_APP": "Aplicação de Clima",
+    "ERROR_LOADING": "Erro ao carregar os dados do clima.",
+    "SUNNY_WEATHER": "Tempo ensolarado",
+    "COLD_WEATHER": "Tempo frio"
   }
 }

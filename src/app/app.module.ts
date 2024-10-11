@@ -11,6 +11,7 @@ import { WeatherHomeComponent } from './modules/weather/page/weather-home/weathe
 import { WeatherCardComponent } from './modules/weather/components/weather-card/weather-card.component';
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
+import { UnitSwitcherComponent } from './modules/weather/components/unit-switcher/unit-switcher.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -20,7 +21,8 @@ export function HttpLoaderFactory(http: HttpClient) {
   declarations: [
     AppComponent,
     WeatherHomeComponent,
-    WeatherCardComponent
+    WeatherCardComponent,
+    UnitSwitcherComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,7 @@
+<div *ngIf="loading">Carregando...</div>
+
+<app-unit-switcher (unitChange)="switchUnit($event)"></app-unit-switcher>
+
 <div class="search">
   <form #form="ngForm" (submit)="onSubmit()">
     <input type="text" placeholder="{{ 'WEATHER.SEARCH_LOCATION' | translate }}" name="city"
@@ -10,4 +14,5 @@
   </form>
 </div>
 
-<app-weather-card *ngIf="weatherData" [weatherDataInput]="weatherData"></app-weather-card>
+
+<app-weather-card *ngIf="weatherData" [weatherDataInput]="weatherData" [currentUnit]="currentUnit"></app-weather-card>

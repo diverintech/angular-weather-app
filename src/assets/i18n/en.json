@@ -10,6 +10,9 @@
     "WIND_SPEED": "Wind speed",
     "KMH": "km/h",
     "SEARCH_LOCATION": "Search location",
-    "WEATHER_APP": "Weather Application"
+    "WEATHER_APP": "Weather Application",
+    "ERROR_LOADING": "Error loading weather data.",
+    "SUNNY_WEATHER": "Sunny weather",
+    "COLD_WEATHER": "Cold weather"
   }
 }

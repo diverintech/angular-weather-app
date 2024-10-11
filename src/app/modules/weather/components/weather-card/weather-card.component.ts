@@ -1,6 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { WeatherData } from '../../../../models/interfaces/WeatherData.interface';
 import { faDroplet, faTemperatureHigh, faTemperatureLow, faWind } from '@fortawesome/free-solid-svg-icons';
+import { TemperatureConverterService } from '../../services/temperatureConverter/temperature-converter.service';
 
 @Component({
   selector: 'app-weather-card',
@@ -10,6 +11,7 @@ import { faDroplet, faTemperatureHigh, faTemperatureLow, faWind } from '@fortawe
 export class WeatherCardComponent {
 
   @Input() weatherDataInput!: WeatherData;
+  @Input() currentUnit!: string;
 
   icons = {
     minTemp: faTemperatureLow,
@@ -17,5 +19,4 @@ export class WeatherCardComponent {
     humidity: faDroplet,
     wind: faWind
   };
-
 }
