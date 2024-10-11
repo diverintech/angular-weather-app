@@ -13,6 +13,9 @@
     "WEATHER_APP": "Weather Application",
     "ERROR_LOADING": "Error loading weather data.",
     "SUNNY_WEATHER": "Sunny weather",
-    "COLD_WEATHER": "Cold weather"
+    "COLD_WEATHER": "Cold weather",
+    "RAIN": "Rain",
+    "SUNNY_DAY": "Sunny Day",
+    "NO_RAIN": "No Rain"
   }
 }

@@ -13,6 +13,9 @@
     "WEATHER_APP": "Aplicação de Clima",
     "ERROR_LOADING": "Erro ao carregar os dados do clima.",
     "SUNNY_WEATHER": "Tempo ensolarado",
-    "COLD_WEATHER": "Tempo frio"
+    "COLD_WEATHER": "Tempo frio",
+    "RAIN": "Chuva",
+    "SUNNY_DAY": "Dia de Sol",
+    "NO_RAIN": "Não Chove"
   }
 }
