@@ -16,7 +16,7 @@ export class WeatherHomeComponent implements OnInit, OnDestroy {
   weatherData!: WeatherData;
   searchIcon = faMagnifyingGlass;
   loading: boolean = false;
-  currentUnit: string = 'C'; // Unidade atual
+  currentUnit: string = 'C';
 
   constructor(private weatherService: WeatherService, private tempConverter: TemperatureConverterService) { }
 
