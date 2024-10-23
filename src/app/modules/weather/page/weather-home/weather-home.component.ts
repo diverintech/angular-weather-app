@@ -8,7 +8,7 @@ import { TemperatureConverterService } from '../../services/temperatureConverter
 @Component({
   selector: 'app-weather-home',
   templateUrl: './weather-home.component.html',
-  styleUrls: [],
+  styleUrls: ['./weather-home.component.scss'],
 })
 export class WeatherHomeComponent implements OnInit, OnDestroy {
   private readonly destroy$: Subject<void> = new Subject();

@@ -1,18 +1,35 @@
 <div *ngIf="loading">Carregando...</div>
 
-<app-unit-switcher (unitChange)="switchUnit($event)"></app-unit-switcher>
+<div class="container">
+  <div class="header">
+    <div class="language-container">
+      <app-language-switcher>
+      </app-language-switcher>
+    </div>
+    <div class="temperature-container">
+      <app-unit-switcher (unitChange)="switchUnit($event)"></app-unit-switcher>
+    </div>
+  </div>
 
-<div class="search">
-  <form #form="ngForm" (submit)="onSubmit()">
-    <input type="text" placeholder="{{ 'WEATHER.SEARCH_LOCATION' | translate }}" name="city"
-      [(ngModel)]="initialCityName" />
+  <div class="search-container">
+    <form #form="ngForm" (submit)="onSubmit()">
+      <input type="text" placeholder="{{ 'WEATHER.SEARCH_LOCATION' | translate }}" name="city"
+        [(ngModel)]="initialCityName" />
 
-    <span (click)="onSubmit()">
-      <fa-icon animation="fade" style="--fa-animation-duration: 5s; cursor: pointer" size="lg" class="search-icon"
-        [icon]="searchIcon"></fa-icon>
-    </span>
-  </form>
+      <span (click)="onSubmit()">
+        <fa-icon animation="fade" style="--fa-animation-duration: 5s; cursor: pointer" size="lg" class="search-icon"
+          [icon]="searchIcon"></fa-icon>
+      </span>
+    </form>
+  </div>
+
+  <div class="weather-container">
+    <app-weather-card *ngIf="weatherData" [weatherDataInput]="weatherData"
+      [currentUnit]="currentUnit"></app-weather-card>
+  </div>
+
+  <div class="footer">
+    <p> By Joana Pires</p>
+  </div>
+
 </div>
-
-
-<app-weather-card *ngIf="weatherData" [weatherDataInput]="weatherData" [currentUnit]="currentUnit"></app-weather-card>
