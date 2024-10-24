@@ -1,10 +1,41 @@
 # Weather App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.8, but the option to disable standalone components was applied using the following command: `ng new --no-standalone`.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.8, with the option to disable standalone components applied using the following command: `ng new --no-standalone`.
 
-The project is based on the course Curso de Angular 15: Do Iniciante ao Especialista by Marcos Naves on Udemy.
+The objective of this project is to create an app that consumes the API provided by [OpenWeatherMap](https://openweathermap.org/). 
 
-The objective of this project is to create an app that consumes the API provided by [OpenWeatherMap](https://openweathermap.org/).
+To run the project, you will need to create an account on OpenWeatherMap and generate an API key. Note that it can take up to a day for the key to become active.
+
+## Steps to Obtain an API Key:
+1. Go to [OpenWeatherMap Sign-Up Page](https://home.openweathermap.org/users/sign_up).
+2. Create an account by filling in the required details.
+3. Once your account is verified, log in and go to the **API keys** section under your account settings.
+4. Generate a new API key and use it in your project.
+
+## Configuration for API Key
+
+After obtaining the API key, you need to create two configuration files in the `src/environments` folder.
+
+### `environment.prod.ts`
+```typescript
+import { IEnvironment } from "./ienvironment";
+
+export const environment: IEnvironment = {
+  production: true,
+  apiKey: 'YOUR_PRIVATE_KEY',
+};
+```
+
+### `environment.ts`
+
+```typescript
+import { IEnvironment } from "./ienvironment";
+
+export const environment: IEnvironment = {
+production: false,
+apiKey: 'YOUR_PRIVATE_KEY',
+};
+```
 
 ## Development server
 
