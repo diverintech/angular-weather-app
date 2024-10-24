@@ -2,10 +2,14 @@
   display: grid;
   width: auto;
   grid-template-rows: 4rem 5rem auto 4rem;
+  background-image: url("/assets/clouds.jpg");
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px var(--shadow-dark);
 
   .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-top: 2rem;
 
@@ -22,26 +26,31 @@
     text-align: center;
     margin-top: 2rem;
 
-    input {
-      background-color: var(--shadow-light);
-      outline: none;
-      border: none;
-      border-radius: 20px;
-      padding: 1em;
-      color: #fff;
-      font-size: 0.8em;
-      text-align: center;
+    .input-container {
+      position: relative;
+      display: inline-block;
       width: 70%;
-    }
 
-    .search {
-      margin-top: 2em;
-      text-align: center;
-    }
+      input {
+        width: 100%;
+        background-color: var(--shadow-light);
+        outline: none;
+        border: none;
+        border-radius: 20px;
+        padding: 1em;
+        padding-right: 3em;
+        color: #fff;
+        font-size: 0.8em;
+        text-align: center;
+      }
 
-    .search-icon {
-      margin-left: 1em;
-      cursor: pointer;
+      .search-icon {
+        position: absolute;
+        top: 50%;
+        right: 1em;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
     }
   }
 
