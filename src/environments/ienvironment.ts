@@ -1,4 +1,4 @@
 export interface IEnvironment {
     production: boolean;
-    apiKey: string;
+    weatherApiKey: string;
 }

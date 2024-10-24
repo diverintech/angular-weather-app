@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { WeatherService } from '../../services/weatherData/weather.service';
-import { WeatherData } from "../../../../models/interfaces/WeatherData.interface";
+import { WeatherData } from "../../../../interfaces/weatherData.interface";
 import { TemperatureConverterService } from '../../services/temperatureConverter/temperature-converter.service';
 
 @Component({

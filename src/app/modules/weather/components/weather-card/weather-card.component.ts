@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { WeatherData } from '../../../../models/interfaces/WeatherData.interface';
+import { WeatherData } from '../../../../interfaces/weatherData.interface';
 import {
   faDroplet,
   faSun,

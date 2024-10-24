@@ -32,8 +32,8 @@ export const environment: IEnvironment = {
 import { IEnvironment } from "./ienvironment";
 
 export const environment: IEnvironment = {
-production: false,
-apiKey: 'YOUR_PRIVATE_KEY',
+  production: false,
+  apiKey: 'YOUR_PRIVATE_KEY',
 };
 ```
 

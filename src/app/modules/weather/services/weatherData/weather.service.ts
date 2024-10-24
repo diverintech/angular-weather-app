@@ -9,7 +9,7 @@ import {environment} from "@env/environment";
 })
 export class WeatherService {
 
-  private apiKey = environment.apiKey;
+  private apiKey = environment.weatherApiKey;
 
   constructor(private http: HttpClient) { }
 
