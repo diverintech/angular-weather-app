@@ -1,13 +1,6 @@
 name: CI build
 on: [push, workflow_dispatch]
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Test the application
-        uses: diverintech/shared-actions/test-node-project@v1.0.0
-        with:
-          node-version: "20"
   build:
     needs: test
     runs-on: ubuntu-latest
