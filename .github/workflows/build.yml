@@ -2,7 +2,6 @@ name: CI build
 on: [push, workflow_dispatch]
 jobs:
   build:
-    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Build the application
