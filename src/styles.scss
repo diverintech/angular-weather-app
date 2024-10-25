@@ -7,10 +7,17 @@
   --shadow-light: rgba(255, 255, 255, 0.277);
 }
 
-* {
-  box-sizing: border-box;
-}
-
 fa-icon {
   color: var(--white);
+}
+
+body {
+  width: fit-content;
+  background-image: url("/assets/weather04.jpg");
+  background-size: cover;
+  border-radius: 20px;
+
+  @media (min-width: 480px) {
+    width: 100%;
+  }
 }

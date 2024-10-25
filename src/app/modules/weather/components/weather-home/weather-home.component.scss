@@ -1,11 +1,11 @@
 .container {
-  display: grid;
   width: auto;
   grid-template-rows: 4rem 5rem auto 4rem;
-  background-image: url("/assets/clouds.jpg");
-  background-size: cover;
-  border-radius: 20px;
-  box-shadow: 10px 10px 10px var(--shadow-dark);
+  padding: 1vh 0vh 2vh 0vw;
+
+  @media (min-width: 481px) {
+    padding: 2% 25% 2%;
+  }
 
   .header {
     display: flex;
@@ -24,15 +24,13 @@
 
   .search-container {
     text-align: center;
-    margin-top: 2rem;
+    margin: 2rem 0 3rem 0;
 
     .input-container {
       position: relative;
       display: inline-block;
-      width: 70%;
 
       input {
-        width: 100%;
         background-color: var(--shadow-light);
         outline: none;
         border: none;
