@@ -15,29 +15,7 @@ To run the project, you will need to create an account on OpenWeatherMap and gen
 
 ## Configuration for API Key
 
-After obtaining the API key, you need to create two configuration files in the `src/environments` folder.
-
-### `environment.prod.ts`
-
-```typescript
-import { IEnvironment } from "./ienvironment";
-
-export const environment: IEnvironment = {
-  production: true,
-  weatherApiKey: "YOUR_PRIVATE_KEY",
-};
-```
-
-### `environment.ts`
-
-```typescript
-import { IEnvironment } from "./ienvironment";
-
-export const environment: IEnvironment = {
-  production: false,
-  weatherApiKey: "YOUR_PRIVATE_KEY",
-};
-```
+After obtaining the API key, you need to add the key on environment.mock.ts.
 
 ## Packages:
 
@@ -69,7 +47,8 @@ export const environment: IEnvironment = {
 Navigate to `http://localhost:4200/` in your browser to see the application. The application will automatically reload if you change any of the source files.
 
 > **Note:** Ensure you have an updated version of Node.js installed on your machine. You can verify your Node.js version with:
+>
 > ```bash
 > node -v
-> 
-
+>
+> ```
