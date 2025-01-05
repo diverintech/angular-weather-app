@@ -1,9 +1,12 @@
-<div class="container" role="region" aria-labelledby="weather-info" *ngIf="weatherDataInput; else errorTemplate">
-
+<div
+  class="container"
+  role="region"
+  aria-labelledby="weather-info"
+  *ngIf="weatherDataInput; else errorTemplate"
+>
   <div class="image-container">
-    <img src="assets/sun.jpg" *ngIf="weatherDataInput.main.temp > 15" alt="{{ 'WEATHER.SUNNY_WEATHER' | translate }}" />
-    <img src="assets/cold1.jpg" *ngIf="weatherDataInput.main.temp <= 15"
-      alt="{{ 'WEATHER.COLD_WEATHER' | translate }}" />
+    <img [src]="imagePath" alt="{{ imageDescription | translate }}" />
+
     <div class="weather-data">
       <div class="location">{{ weatherDataInput.name }}</div>
       <div class="temperature">
@@ -12,35 +15,38 @@
     </div>
   </div>
 
-
   <div class="data-container">
     <div class="more-info-container">
       <div class="info-block">
         <div class="info-block-label">
           <fa-icon size="lg" [icon]="icons.minTemp"></fa-icon>
-          <span>{{ 'WEATHER.MINIMUM' | translate }}</span>
+          <span>{{ "WEATHER.MINIMUM" | translate }}</span>
         </div>
 
         <div class="info-block-value">
-          {{ weatherDataInput.main.temp_min | number : "1.0-0" }} º{{ currentUnit }}
+          {{ weatherDataInput.main.temp_min | number : "1.0-0" }} º{{
+            currentUnit
+          }}
         </div>
       </div>
 
       <div class="info-block">
         <div class="info-block-label">
           <fa-icon size="lg" [icon]="icons.maxTemp"></fa-icon>
-          <span>{{ 'WEATHER.MAXIMUM' | translate }}</span>
+          <span>{{ "WEATHER.MAXIMUM" | translate }}</span>
         </div>
 
         <div class="info-block-value">
-          {{ weatherDataInput.main.temp_max | number : "1.0-0" }} º{{ currentUnit }}
+          {{ weatherDataInput.main.temp_max | number : "1.0-0" }} º{{
+            currentUnit
+          }}
         </div>
       </div>
 
       <div class="info-block">
         <div class="info-block-label">
           <fa-icon size="lg" [icon]="icons.humidity"></fa-icon>
-          <span>{{ 'WEATHER.HUMIDITY' | translate }}</span>
+          <span>{{ "WEATHER.HUMIDITY" | translate }}</span>
         </div>
 
         <div class="info-block-value">
@@ -51,7 +57,7 @@
       <div class="info-block">
         <div class="info-block-label">
           <fa-icon size="lg" [icon]="icons.wind"></fa-icon>
-          <span>{{ 'WEATHER.WIND' | translate }}</span>
+          <span>{{ "WEATHER.WIND" | translate }}</span>
         </div>
 
         <div class="info-block-value">
@@ -62,9 +68,12 @@
       <div class="info-block">
         <div class="info-block-label">
           <fa-icon size="lg" [icon]="icons.rain"></fa-icon>
-          <span>{{ 'WEATHER.RAIN' | translate }}</span>
+          <span>{{ "WEATHER.RAIN" | translate }}</span>
         </div>
-        <div class="info-block-value" *ngIf="weatherDataInput.rain; else noRainContainer">
+        <div
+          class="info-block-value"
+          *ngIf="weatherDataInput.rain; else noRainContainer"
+        >
           {{ weatherDataInput.rain["1h"] }} %
         </div>
 
@@ -78,7 +87,6 @@
   </div>
 </div>
 
-
 <ng-template #errorTemplate>
-  <div class="error-message">{{ 'WEATHER.ERROR_LOADING' | translate }}</div>
+  <div class="error-message">{{ "WEATHER.ERROR_LOADING" | translate }}</div>
 </ng-template>
