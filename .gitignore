@@ -42,8 +42,7 @@ testem.log
 Thumbs.db
 
 # Environments
-environment.ts
-environment.prod.ts
+
 
 # Others
 improvements.txt
