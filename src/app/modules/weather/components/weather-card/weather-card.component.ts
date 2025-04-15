@@ -10,9 +10,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-weather-card',
-  templateUrl: './weather-card.component.html',
-  styleUrls: ['./weather-card.component.scss']
+    selector: 'app-weather-card',
+    templateUrl: './weather-card.component.html',
+    styleUrls: ['./weather-card.component.scss'],
+    standalone: false
 })
 export class WeatherCardComponent {
 

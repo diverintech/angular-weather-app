@@ -1,9 +1,10 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-unit-switcher',
-  templateUrl: './unit-switcher.component.html',
-  styleUrls: ['./unit-switcher.component.scss']
+    selector: 'app-unit-switcher',
+    templateUrl: './unit-switcher.component.html',
+    styleUrls: ['./unit-switcher.component.scss'],
+    standalone: false
 })
 export class UnitSwitcherComponent {
   @Output() unitChange = new EventEmitter<string>();

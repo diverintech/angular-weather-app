@@ -3,9 +3,10 @@ import { Quote } from 'src/app/interfaces/quote.interface';
 import { QuoteService } from '../../services/quote/quote.service';
 
 @Component({
-  selector: 'app-footer',
-  templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss'
+    selector: 'app-footer',
+    templateUrl: './footer.component.html',
+    styleUrl: './footer.component.scss',
+    standalone: false
 })
 export class FooterComponent implements OnInit {
   quote: Quote | null = null;
