@@ -1,6 +1,6 @@
 # Weather App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.8, with the option to disable standalone components applied using the following command: `ng new --no-standalone`.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 19, with the option to disable standalone components applied using the following command: `ng new --no-standalone`.
 
 The objective of this project is to create an app that consumes the API provided by [OpenWeatherMap](https://openweathermap.org/).
 
@@ -69,7 +69,8 @@ export const environment: IEnvironment = {
 Navigate to `http://localhost:4200/` in your browser to see the application. The application will automatically reload if you change any of the source files.
 
 > **Note:** Ensure you have an updated version of Node.js installed on your machine. You can verify your Node.js version with:
+>
 > ```bash
 > node -v
-> 
-
+>
+> ```
