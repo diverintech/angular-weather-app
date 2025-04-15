@@ -47,3 +47,5 @@ environment.prod.ts
 
 # Others
 improvements.txt
+
+.environment.mock.ts
